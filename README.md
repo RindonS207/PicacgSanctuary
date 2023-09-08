@@ -7,6 +7,9 @@ https://pan.fastmirror.net/s/6ymHm
 
 开发者 > 本脚本使用到selenium等模块，没安装的要使用pip安装哟。
 
+```
+pip instal selenium
+```
 
 更新记录 >
 
