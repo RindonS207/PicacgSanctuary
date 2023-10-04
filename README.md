@@ -3,7 +3,7 @@
 
 ## 使用者 > 
 使用此脚本需要安装Edge浏览器驱动与火狐浏览器，如果你不知道如何下载可以前往
-> https://pan.fastmirror.net/s/6ymHm
+> https://pan.fastmirror.net/s/6ymHm <
 <br/>下载，分享码是Rindong 里边整合了所有版本以及相应的驱动
 
 ## 开发者 > 
