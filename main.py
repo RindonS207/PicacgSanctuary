@@ -107,7 +107,7 @@ def main():
         opts.proxy = p
         opts.add_argument('--ignore-certificate-errors')
         # opts.add_argument('--user-data-dir="cachebrowser"')
-        opts.add_argument('--headless')
+        # opts.add_argument('--headless')
         if getattr(sys, 'frozen', False):
             current_dir = os.path.dirname(sys.executable)
         else:
@@ -135,10 +135,14 @@ made by 凛冻冻 v1.2\n食用方法：首先用此程序抓取M3U8文件，然�
                     driver.get(website)
                     download_list = []
                     thread_list = []
+                    index = 0
+                    while True:
+                        if driver.find_elements(By.XPATH, '//*[@id="ep-1"]/img'):
+                            break
+                        time.sleep(1)
                     title = driver.find_element(By.XPATH, '//h4[contains(@class,"my-comic-title")]').text
                     base_save_path = 'download/comic/' + title + "/"
                     os.makedirs(base_save_path, exist_ok=True)
-                    index = 0
                     for img in driver.find_elements(By.XPATH, '//*[@id="ep-1"]/img'):
                         download_list.append(DownloadInfo(img.get_attribute("data-src"), \
                                                           base_save_path + str(index) + '.jpg'))
@@ -252,6 +256,7 @@ made by 凛冻冻 v1.2\n食用方法：首先用此程序抓取M3U8文件，然�
     finally:
         if driver:
             driver.quit()
+        sys.exit(0)
 
 
 if __name__ == "__main__":
