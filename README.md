@@ -1,20 +1,27 @@
 # PicacgSanctuary
-用于自动下载哔咔庇护所本子的脚本
+用于自动下载哔咔庇护所本子和里番的脚本
 
 ## 使用者 > 
-使用此脚本需要安装Edge浏览器驱动与火狐浏览器，如果你不知道如何下载可以前往
-> https://pan.fastmirror.net/s/6ymHm
-
-下载，分享码是Rindong 里边整合了所有版本以及相应的驱动
+使用此脚本需要安装火狐浏览器
+然后在Release下载可执行文件
 
 ## 开发者 > 
-本脚本使用到selenium等模块，没安装的要使用pip安装哟。
+本脚本使用到selenium等模块，没安装的要使用pip安装哟。因为开发的时候没用虚拟环境emmmm要是缺包了就自己找把。
+可以在release下载到原项目包和可执行包。
 
 ```
-pip instal selenium
+pip install selenium
+pip install yaml
+pip install mitmproxy
+pip install m3u8
+pip install cryptography
 ```
 
 ## 更新记录 >
+
+### v1.2
+暂时移除了对Edge的支持，火狐好用的一批！
+添加了下载视频功能
 
 ### v1.1
 添加了Edge驱动的支持，优化了下载图片的方式，添加了请求失败重新请求的功能
@@ -24,4 +31,3 @@ pip instal selenium
 
 ## 更新预告 >
 
-1.2版本预计会添加下载功能，可以下载视频和里番
